@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Responsive layout with flex */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s;
+        }
+
+        /* Container for content */
+        .container {
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            max-width: 500px;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Responsive title styling */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Button-style links */
+        .link-button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px 0;
+            color: #ffd700;
+            background-color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        /* Hover and focus effects */
+        .link-button:hover, .link-button:focus {
+            background-color: #ffd700;
+            color: #333;
+            transform: scale(1.05);
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .link-button {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+    <script>
+        // JavaScript to change background color on page load
+        const colors = ["#4A90E2", "#50E3C2", "#F5A623", "#D0021B", "#BD10E0", "#B8E986"];
+        
+        function changeBackgroundColor() {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+        
+        window.onload = changeBackgroundColor;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>SABIAN SECONDARY School</h1>
+        <p><a href="sabian.html" class="link-button">Go to Sabian Page</a></p>
+        <p><a href="staff.html" class="link-button">Staff</a></p>
+        <p><a href="administration.html" class="link-button">Administration</a></p>
+    </div>
+</body>
+</html>
